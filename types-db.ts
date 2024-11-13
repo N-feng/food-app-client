@@ -5,8 +5,10 @@ export interface Products {
   images: { url: string }[];
   isFeatured: boolean;
   isArchived: boolean;
-  category: string;
-  size: string;
+  categoryId: string;
+  sizeId: string;
+  category: Category;
+  size: Size;
   kitchen: string;
   cuisine: string;
   qty: number;
@@ -46,4 +48,10 @@ export interface Orders {
   address: string;
   order_status: string;
   userId: string;
+}
+
+export interface Origin {
+  id: string;
+  name: string;
+  value: string;
 }

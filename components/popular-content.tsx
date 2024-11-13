@@ -48,7 +48,7 @@ export default function PopularContent({ data }: PopularContentProps) {
         )}
         {data.category && (
           <div className="rounded-md bg-blue-500/10 px-2 py-[2px] text-xs capitalize whitespace-nowrap  text-center">
-            {data.category}
+            {data.category.name}
           </div>
         )}
         {data.kitchen && (
@@ -58,7 +58,7 @@ export default function PopularContent({ data }: PopularContentProps) {
         )}
         {data.size && (
           <div className="rounded-md bg-yellow-500/10 px-2 py-[2px] text-xs capitalize whitespace-nowrap  text-center">
-            {data.size}
+            {data.size.name}
           </div>
         )}
       </div>

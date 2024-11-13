@@ -4,20 +4,22 @@ import qs from "query-string";
 const URL = `${process.env.NEXT_PUBLIC_API_URL}/products`;
 
 interface Query {
-  size?: string;
+  categoryId?: string;
+  sizeId?: string;
+  kitchenId?: string;
+  cuisineId?: string;
   isFeatured?: boolean;
-  origin?: string;
-  category?: string;
 }
 
 const getProducts = async (query: Query): Promise<Products[]> => {
   const url = qs.stringifyUrl({
     url: URL,
     query: {
-      size: query.size,
+      categoryId: query.categoryId,
+      sizeId: query.sizeId,
+      kitchenId: query.kitchenId,
+      cuisineId: query.cuisineId,
       isFeatured: query.isFeatured,
-      origin: query.origin,
-      category: query.category,
     },
   });
   const res = await fetch(url);

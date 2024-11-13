@@ -14,7 +14,7 @@ export default async function HomePage() {
   let products: Products[] = [];
   try {
     products = await getProducts({ isFeatured: true });
-    console.log("🚀 ~ HomePage ~ products:", products);
+    // console.log("🚀 ~ HomePage ~ products:", products);
   } catch (err: any) {
     console.log(err.message);
   }
