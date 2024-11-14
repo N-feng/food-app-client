@@ -9,6 +9,7 @@ export interface Products {
   sizeId: string;
   category: Category;
   size: Size;
+  product: Products;
   kitchen: string;
   cuisine: string;
   qty: number;

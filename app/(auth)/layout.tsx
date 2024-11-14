@@ -3,7 +3,7 @@ interface IAuthLayoutProps {
 }
 export default function AuthLayout({ children }: IAuthLayoutProps) {
   return (
-    <div className="flex items-center justify-center h-[calc(100%-170px)]">
+    <div className="flex items-center justify-center h-[calc(100%-80px)]">
       {children}
     </div>
   );
